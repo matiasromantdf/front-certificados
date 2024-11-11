@@ -1,0 +1,57 @@
+/* Estilos adicionales personalizados */
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+#certificadoContent {
+    padding: 40px;
+    border: 2px solid #dee2e6;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+#certificadoContent h2 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#certificadoContent h3 {
+    color: #34495e;
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+#certificadoContent ul {
+    margin: 20px 0;
+}
+
+#certificadoContent ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.form-check {
+    margin: 10px 0;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    #certificadoContent {
+        border: none;
+        padding: 0;
+    }
+}

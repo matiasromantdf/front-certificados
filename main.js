@@ -1,0 +1,1 @@
+const apiUrl= 'http://localhost/api-certificados/public';
