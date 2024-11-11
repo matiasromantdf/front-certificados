@@ -1,98 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestión de Alumnos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Sistema de Certificaciones</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="alumnos.html">Alumnos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="capacidades.html">Capacidades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="certificados.html">Certificados</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Sistema de Certificaciones</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="alumnos.html">Alumnos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="capacidades.html">Capacidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="certificados.html">Certificados</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <div class="container mt-4">
-        <h2>Gestión de Alumnos</h2>
-        
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        Buscar Alumno
-                    </div>
-                    <div class="card-body">
-                        <div class="input-group mb-3">
-                            <input type="text" id="searchDni" class="form-control" placeholder="Ingrese DNI">
-                            <button class="btn btn-primary" onclick="buscarAlumno()">Buscar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <h2>Gestión de Alumnos</h2>
 
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        Registrar Nuevo Alumno
-                    </div>
-                    <div class="card-body">
-                        <form id="alumnoForm">
-                            <div class="mb-3">
-                                <label class="form-label">DNI</label>
-                                <input type="text" class="form-control" id="dni" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Apellido</label>
-                                <input type="text" class="form-control" id="apellido" required>
-                            </div>
-                            <button type="submit" class="btn btn-success">Guardar</button>
-                        </form>
-                    </div>
-                </div>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Buscar Alumno</div>
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  id="searchDni"
+                  class="form-control"
+                  placeholder="Ingrese DNI"
+                />
+                <button class="btn btn-primary" onclick="buscarAlumno()">
+                  Buscar
+                </button>
+              </div>
             </div>
+          </div>
         </div>
 
-        <div class="mt-4">
-            <h3>Lista de Alumnos</h3>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>DNI</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody id="alumnosTableBody"></tbody>
-                </table>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Registrar Nuevo Alumno</div>
+            <div class="card-body">
+              <form id="alumnoForm">
+                <div class="mb-3">
+                  <label class="form-label">DNI</label>
+                  <input type="text" class="form-control" id="dni" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Apellido</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="apellido"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-success">Guardar</button>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
+
+      <div class="mt-4">
+        <h3>Lista de Alumnos</h3>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+              </tr>
+            </thead>
+            <tbody id="alumnosTableBody"></tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/alumnos.js"></script>
-</body>
+  </body>
 </html>
