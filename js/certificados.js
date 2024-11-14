@@ -43,7 +43,8 @@ async function cargarCapacidadesParaCertificado() {
   });
 }
 
-// Función para relacionar las capacidades a un alumno
+// Función para relacionar las capacidades a un alumno, aca hhacemos el post y una vez que
+// tenemos el id del certificado, llamamos a la función que genera el certificado
 document
   .getElementById("certificadoForm")
   .addEventListener("submit", async function (e) {
@@ -70,8 +71,6 @@ document
       generarCertificadoPorIdCertificado(data.id);//id del certificado
     }
 
-    
-    // generarCertificado(alumno, capacidadesSeleccionadas);
   });
 
 // Función para generar el contenido del certificado
@@ -83,34 +82,3 @@ function generarCertificadoPorIdCertificado(certificadoId) {
  
 }
 
-// Función para imprimir el certificado
-function imprimirCertificado() {
-  const contenido = document.getElementById("certificadoContent").innerHTML;
-  const ventana = window.open("", "PRINT", "height=600,width=800");
-
-  ventana.document.write(`
-        <html>
-            <head>
-                <title>Certificado</title>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-                <style>
-                    body { padding: 20px; }
-                    @media print {
-                        body { padding: 0; }
-                    }
-                </style>
-            </head>
-            <body>
-                ${contenido}
-            </body>
-        </html>
-    `);
-
-  ventana.document.close();
-  ventana.focus();
-
-  setTimeout(function () {
-    ventana.print();
-    ventana.close();
-  }, 250);
-}
